@@ -1,0 +1,25 @@
+{
+  "name": "surfhouse",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebRoni2509/surfhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebRoni2509/surfhouse/issues"
+  },
+  "homepage": "https://github.com/WebRoni2509/surfhouse#readme",
+  "description": ""
+}
