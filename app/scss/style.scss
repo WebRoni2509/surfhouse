@@ -176,8 +176,7 @@ header{
 
 //sidebar styles
 aside{
-  position: relative;
-  top: -20px;
+ 
   width: 270px;
   .side-block{
     padding: 30px;
@@ -279,7 +278,14 @@ aside{
   }
 }
 
+
 //content styles
+.content{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -20px;
+}
 .content-title-box{
   display: flex;
   justify-content: space-between;

@@ -226,8 +226,6 @@ header .header-social .header-social__instagram {
 }
 
 aside {
-  position: relative;
-  top: -20px;
   width: 270px;
 }
 
@@ -342,6 +340,79 @@ aside .article-experts__article-experts-list a {
   color: #555;
   text-decoration: none;
   margin-bottom: 15px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -20px;
+}
+
+.content-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.content-title-box .content-title {
+  text-transform: uppercase;
+  color: #707070;
+  font-style: italic;
+}
+
+.content-title-box .content-title-arrows {
+  font-size: 0;
+}
+
+.content-title-box .content-title-arrows a {
+  text-decoration: none;
+  color: #404040;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+.content-title-box .content-title-arrows a:hover {
+  font-weight: bold;
+}
+
+.items-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-container .product-item {
+  border: solid 1px blue;
+  position: relative;
+  padding: 10px;
+  background: #fff;
+}
+
+.items-container .product-item .product-image {
+  width: 250px;
+  height: 230px;
+  background: #eaeaea;
+}
+
+.items-container .product-item .product-info-box {
+  padding: 15px 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.items-container .product-item .product-info-box .product-name {
+  max-width: 170px;
+  border: solid 1px red;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.items-container .product-item .product-info-box .product-price {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .brands {
