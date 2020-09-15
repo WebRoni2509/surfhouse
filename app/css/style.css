@@ -39,7 +39,7 @@ header .logo {
 header .header-social {
   display: flex;
   flex-direction: row;
-  margin: 25px 70px 0 0;
+  margin: 25px 0 0 0;
 }
 
 header .header-social .header-social__icon {
@@ -72,8 +72,22 @@ header .header-social .header-social__instagram {
   margin: 0 15px 0 0;
 }
 
+header .header-social .select-language {
+  height: 14px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+header .header-social .select-language option {
+  color: #000;
+}
+
 .slider {
-  padding: 0 0 55px 0;
+  padding: 0 0 60px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .slider-sidebar {
@@ -199,6 +213,10 @@ header .header-social .header-social__instagram {
   cursor: pointer;
 }
 
+.slider-sidebar .search .search-btn:hover {
+  background-color: #000;
+}
+
 .slider-sidebar .search .search-btn:focus {
   outline: medium none;
 }
@@ -223,6 +241,92 @@ header .header-social .header-social__instagram {
   font-style: italic;
   letter-spacing: 0;
   white-space: pre-wrap;
+}
+
+.slider-inner {
+  width: 870px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.slider-inner .slide-box {
+  color: #fff51f;
+  width: 320px;
+  margin: 65px 100px 0 0;
+}
+
+.slider-inner .slide-box h2 {
+  font: 48px 'Raleway', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 35px;
+  margin: 0 0 10px 0;
+}
+
+.slider-inner .slide-box p {
+  font: 18px 'Raleway', sans-serif;
+  line-height: 24px;
+}
+
+.slider-inner .slide-box button {
+  font: 14px 'Raleway', sans-serif;
+  font-weight: 800;
+  margin-top: 55px;
+  text-transform: uppercase;
+  line-height: 1;
+  background: #fff51f;
+  color: #000;
+  padding: 20px 30px;
+  border: 0 none;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.slider-inner .slide-box button:hover {
+  color: #fff51f;
+  background: #000;
+}
+
+.slider-inner .slider-arrows {
+  position: absolute;
+  top: 150px;
+}
+
+.slider-inner .slider-arrows a {
+  padding: 17px 16px;
+}
+
+.slider-inner .slider-arrows .prev-slide {
+  background: url("../images/prev-slide-icon.png") no-repeat center #fff;
+}
+
+.slider-inner .slider-arrows .next-slide {
+  background: url("../images/next-slide-icon.png") no-repeat center #fff;
+}
+
+.slider-inner .slider-arrows .active-arrow {
+  background-color: #fbde06;
+}
+
+.slider-inner .slider-dots {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.slider-inner .slider-dots span {
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background: #faef03;
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+.slider-inner .slider-dots .slide-active {
+  background: #fb4d01;
 }
 
 aside {
@@ -265,6 +369,7 @@ aside .menu {
   font-weight: 700;
   text-transform: uppercase;
   background: #26d2fc;
+  margin-bottom: 30px;
 }
 
 aside .menu .menu-title {
@@ -276,7 +381,7 @@ aside .menu .menu-title {
 }
 
 aside .menu .menu-list {
-  margin-top: 7px;
+  padding: 10px 0;
 }
 
 aside .menu .menu-list li {
@@ -315,8 +420,18 @@ aside .banner p {
   margin: 0 35px 0 0;
 }
 
+aside .side-block {
+  margin-top: 30px;
+}
+
 aside .tags-widget .tags-widget__tags-list {
   font-size: 0;
+}
+
+aside .tags-widget .tags-widget__tags-list .tag-active {
+  font: 14px 'Roboto', sans-serif;
+  background: #faef03;
+  padding: 10px 25px;
 }
 
 aside .tags-widget .tags-widget__tags-list a {
@@ -336,10 +451,14 @@ aside .article-experts__article-experts-list {
 }
 
 aside .article-experts__article-experts-list a {
-  font-size: 14px;
+  font: 14px 'Roboto', sans-serif;
   color: #555;
   text-decoration: none;
   margin-bottom: 15px;
+}
+
+aside .article-experts__article-experts-list a:hover {
+  text-decoration: underline;
 }
 
 .content {
@@ -349,15 +468,23 @@ aside .article-experts__article-experts-list a {
   top: -20px;
 }
 
+.content-inner {
+  background: #f8f8f8;
+  width: 870px;
+}
+
 .content-title-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  width: 100%;
 }
 
 .content-title-box .content-title {
   text-transform: uppercase;
+  font: 22px 'Roboto', sans-serif;
+  font-weight: 900;
   color: #707070;
   font-style: italic;
 }
@@ -380,13 +507,15 @@ aside .article-experts__article-experts-list a {
 .items-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .items-container .product-item {
-  border: solid 1px blue;
+  max-width: 270px;
   position: relative;
   padding: 10px;
   background: #fff;
+  margin: 0 0 30px 0;
 }
 
 .items-container .product-item .product-image {
@@ -396,6 +525,9 @@ aside .article-experts__article-experts-list a {
 }
 
 .items-container .product-item .product-info-box {
+  font: italic 14px 'Roboto', sans-serif;
+  font-weight: 900;
+  color: #333;
   padding: 15px 0 10px;
   display: flex;
   justify-content: space-between;
@@ -403,21 +535,65 @@ aside .article-experts__article-experts-list a {
 
 .items-container .product-item .product-info-box .product-name {
   max-width: 170px;
-  border: solid 1px red;
   text-decoration: none;
-  color: #000;
-  font-size: 14px;
-  font-weight: 700;
+  color: #333;
 }
 
 .items-container .product-item .product-info-box .product-price {
   font-size: 18px;
-  font-weight: 700;
+}
+
+.items-container .product-item .product-info-box .product-price .discount-price {
+  font-style: italic;
+  font-size: 14px;
+  text-align: right;
+  color: #e24602;
+  display: block;
+  text-decoration: line-through;
 }
 
 .brands {
   height: 160px;
   background: url("../images/brands.png") #fff no-repeat center;
+}
+
+.instagram-feed {
+  background: #eaeaea;
+  padding-bottom: 60px;
+}
+
+.instagram-feed .instagram-feed__profile-name {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 30px;
+}
+
+.instagram-feed .instagram-feed__profile-name img {
+  margin: 0 10px 0 0;
+}
+
+.instagram-feed .instagram-feed__profile-name p {
+  font: 22px "Myriad Pro", sans-serif;
+  color: #333;
+}
+
+.instagram-feed .instagram-feed__profile-name p span {
+  font-size: 18px;
+}
+
+.instagram-feed .instagram-feed__profile-photos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.instagram-feed .instagram-feed__profile-photos .instagram-photo {
+  width: 170px;
+  height: 170px;
+  border: solid 7px #fff;
+  background: url("https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .social-box {
@@ -496,4 +672,8 @@ footer .footer-newsletter {
 footer .footer-about-us {
   max-width: 270px;
   border: 1px solid #0f0;
+}
+
+footer .footer-newsletter h4, footer .footer-about-us h4 {
+  margin-bottom: 5px;
 }

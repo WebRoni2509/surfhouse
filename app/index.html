@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Surfhouse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media-queries.css">
+
 </head>
 <body>
     <section class="blue-bg">
@@ -18,7 +20,10 @@
             <a href="#" class="header-social__icon header-social__youtube"></a>
             <a href="#" class="header-social__icon header-social__pinterest"></a>
             <a href="#" class="header-social__icon header-social__instagram"></a>
-            <a href="#"></a>
+            <select class="select-language" id="change-lang">
+              <option value="UA">UA</option>
+              <option value="EN">EN</option>
+            </select>
           </div>
         </header>
         <section class="slider">
@@ -47,14 +52,28 @@
                 <button type="button" class="search-btn"></button>
               </div>
             </div>
-
             <div class="intro">
               <h3>welcome to surfhouse</h3>
               <p>The only online store you will ever need for all your windsurfing and kitesurf-ing and SUP needs</p>
+              
             </div>
-
+          </div>
+          <div class="slider-inner">
+            <div class="slide-box">
+              <h2>jp funride 2014</h2>
+              <p>Super easy going freeride boards based on the X-Cite Ride shape concept with additional control and super easy jibing. </p>
+              <button type="button" class="bye-now-btn">buy now</button>
             </div>
-            
+            <div class="slider-arrows">
+              <a href="#" class="prev-slide"></a>
+              <a href="#" class="next-slide active-arrow"></a>
+            </div>
+            <div class="slider-dots">
+              <span class="slide-active"></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </section>
       </div>
     </section>
@@ -64,104 +83,204 @@
       <div class="content">
 
       
-      <aside>
-        <div class="menu">
-          <h4 class="menu-title">menu</h4>
-          <ul class="menu-list">
-            <li><a href="#">about</a></li>
-            <li><a href="#">apparel</a></li>
-            <li><a href="#">surf apparel</a></li>
-            <li><a href="#">windsurf</a></li>
-            <li><a href="#">kitesurf</a></li>
-            <li><a href="#">accessories</a></li>
-            <li><a href="#">sale</a></li>
-            <li><a href="#">brands</a></li>
-            <li><a href="#">blog</a></li>
-            <li><a href="#">gadgets</a></li>
-            <li><a href="#">cantact</a></li> <!-- should be cOntact-->
-          </ul>
-        </div>
-
-        <div class="banner">
-          <p>now is open!</p>
-        </div>
-
-        <div class="side-block tags-widget">
-          <h4>tags widget</h4>
-          <div class="tags-widget__tags-list">
-            <a href="#">kitesurf</a>
-            <a href="#">super</a>
-            <a href="#">duper</a>
-            <a href="#">theme</a>
-            <a href="#">men</a>
-            <a href="#">woomen</a>
-            <a href="#">equipment</a>
-            <a href="#">best</a>
-            <a href="#">accesories</a>
-            <a href="#">men</a>
-            <a href="#">apprel</a>
-            <a href="#">super</a>
-            <a href="#">duper</a>
-            <a href="#">theme</a>
-            <a href="#">responsiv</a>
-            <a href="#">men</a>
-            <a href="#">woomen</a>
-            <a href="#">equipment</a>
+        <aside>
+          <div class="menu">
+            <h4 class="menu-title">menu</h4>
+            <ul class="menu-list">
+              <li><a href="#">about</a></li>
+              <li><a href="#">apparel</a></li>
+              <li><a href="#">surf apparel</a></li>
+              <li><a href="#">windsurf</a></li>
+              <li><a href="#">kitesurf</a></li>
+              <li><a href="#">accessories</a></li>
+              <li><a href="#">sale</a></li>
+              <li><a href="#">brands</a></li>
+              <li><a href="#">blog</a></li>
+              <li><a href="#">gadgets</a></li>
+              <li><a href="#">cantact</a></li> <!-- should be cOntact-->
+            </ul>
           </div>
-          <a href="#" class="view-all-btn">view all tags</a>
-        </div>
 
-        <div class="side-block article-experts">
-          <h4>artical experts</h4>
-          <div class="article-experts__article-experts-list">
-            <a href="#">LG Spectrum review</a>
-            <a href="#">Verizon Droid Xyboard 8.2 and 10.1 review</a>
-            <a href="#">Mac mini review (mid 2011)</a>
-            <a href="#">Wacom Inking review</a>
-            <a href="#">Sonos Play:3 review</a>
-            <a href="#">HTC Radar 4G review</a>
-            <a href="#">Canon PowerShot S100</a>
-            <a href="#">Apple iMac</a>
+          <div class="banner">
+            <p>now is open!</p>
           </div>
-          <a href="#" class="view-all-btn">view all</a>
-        </div>
-      </aside>
 
-      <div >
-        <div class="content-title-box">
-          <h3 class="content-title">new products</h3>
-          <div class="content-title-arrows">
-            <a href="#" class="prev">&#8249;</a>
-            <a href="#" class="next">&#8250;</a>
+          <div class="side-block tags-widget">
+            <h4>tags widget</h4>
+            <div class="tags-widget__tags-list">
+              <a href="#" class="tag-active">kitesurf</a>
+              <a href="#">super</a>
+              <a href="#">duper</a>
+              <a href="#">theme</a>
+              <a href="#">men</a>
+              <a href="#">woomen</a>
+              <a href="#">equipment</a>
+              <a href="#">best</a>
+              <a href="#">accesories</a>
+              <a href="#">men</a>
+              <a href="#">apprel</a>
+              <a href="#">super</a>
+              <a href="#">duper</a>
+              <a href="#">theme</a>
+              <a href="#">responsiv</a>
+              <a href="#">men</a>
+              <a href="#">woomen</a>
+              <a href="#">equipment</a>
+            </div>
+            <a href="#" class="view-all-btn">view all tags</a>
           </div>
-        </div>
-        <div class="items-container">
-          <div class="product-item">
-            <div class="product-image"></div>
-            <div class="product-info-box">
-              <a href="#" class="product-name">Single Thruster 2013</a>
-              <p class="product-price">€.865.00</p>
+
+          <div class="side-block article-experts">
+            <h4>artical experts</h4>
+            <div class="article-experts__article-experts-list">
+              <a href="#">LG Spectrum review</a>
+              <a href="#">Verizon Droid Xyboard 8.2 and 10.1 review</a>
+              <a href="#">Mac mini review (mid 2011)</a>
+              <a href="#">Wacom Inking review</a>
+              <a href="#">Sonos Play:3 review</a>
+              <a href="#">HTC Radar 4G review</a>
+              <a href="#">Canon PowerShot S100</a>
+              <a href="#">Apple iMac</a>
+            </div>
+            <a href="#" class="view-all-btn">view all</a>
+          </div>
+        </aside>
+
+        <div class="content-inner">
+          <!-- new products -->
+          <div class="content-title-box">
+            <h3 class="content-title">new products</h3>
+            <div class="content-title-arrows">
+              <a href="#" class="prev">&#8249;</a>
+              <a href="#" class="next">&#8250;</a>
             </div>
           </div>
-          <div class="product-item">
-            <div class="product-image"></div>
-            <div class="product-info-box">
-              <a href="#" class="product-name">Single Thruster 2013</a>
-              <p class="product-price">€.865.00</p>
+          <div class="items-container">
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">Single Thruster 2013</a>
+                <p class="product-price">€.865.00</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">Freestyle Wave FSW</a>
+                <p class="product-price">€.770.50 <span class="discount-price">€.770.50</span></p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">The White Collection SURFBOARD 2014</a>
+                <p class="product-price">€.1,580.70</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">OG SCALLOP SOLID</a>
+                <p class="product-price">€.765.00</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">STRIPE 19 QS< /a>
+                <p class="product-price">€.230.50</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">OG SCALLOP SOLID</a>
+                <p class="product-price">€.765.00</p>
+              </div>
+            </div>
+
+            <!-- top products -->
+            <div class="content-title-box">
+              <h3 class="content-title">top products</h3>
+              <div class="content-title-arrows">
+                <a href="#" class="prev">&#8249;</a>
+                <a href="#" class="next">&#8250;</a>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">USHINGHAM LIGHTING 2014</a>
+                <p class="product-price">€.2,960.95 <span class="discount-price">€.3,100.15</span></p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name"> CYPHER HEAT VES M</a>
+                <p class="product-price">€.849.95</p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">SYNCRO WOOMENS QS M</a>
+                <p class="product-price">€.1,110.99</p>
+              </div>
+            </div>
+
+            <!-- sale products -->
+            <div class="content-title-box">
+              <h3 class="content-title">top products</h3>
+              <div class="content-title-arrows">
+                <a href="#" class="prev">&#8249;</a>
+                <a href="#" class="next">&#8250;</a>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">SYNCRO MENS QS M</a>
+                <p class="product-price">€.2249.95 <span class="discount-price">$.450.15</span></p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">RAMOS - SHIRT FOR MEN</a>
+                <p class="product-price">€.459.65 <span class="discount-price">€.570.65</span></p>
+              </div>
+            </div>
+            <div class="product-item">
+              <div class="product-image"></div>
+              <div class="product-info-box">
+                <a href="#" class="product-name">USHINGHAM LIGHTING 2014</a>
+                <p class="product-price">€.240.00 <span class="discount-price">€.370.65</span></p>
+              </div>
             </div>
           </div>
-          <div class="product-item">
-            <div class="product-image"></div>
-            <div class="product-info-box">
-              <a href="#" class="product-name">Single Thruster Single Thruster 2013</a>
-              <p class="product-price">€1.865.00</p>
-            </div>
-          </div>
+
+          
         </div>
       </div>
-      </div>
+
       <div class="brands">
 
+      </div>
+      <div class="instagram-feed">
+        <div class="instagram-feed__profile-name">
+            <img src="/images/insta_profile_icon.png" alt="">
+            <p>Instagram feed: <span>#instagram</span></p>
+            
+        </div>
+        <div class="instagram-feed__profile-photos">
+          <div class="instagram-photo"></div>
+          <div class="instagram-photo"></div>
+          <div class="instagram-photo"></div>
+          <div class="instagram-photo"></div>
+          <div class="instagram-photo"></div>
+          <div class="instagram-photo"></div>
+        </div>
       </div>
       <div class="social-box">
         <a href="#" class="social-box__facebook"></a>
@@ -233,6 +352,8 @@
         
       </div>
     </footer>      
+
+
     <script src="js/main.js"></script>
 </body>
 </html>

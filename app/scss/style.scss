@@ -24,7 +24,7 @@ header{
   .header-social{
     display: flex;
     flex-direction: row;
-    margin: 25px 70px 0 0;
+    margin: 25px 0 0 0;
     .header-social__icon{
       width: 16px;
       height: 16px;
@@ -50,11 +50,23 @@ header{
       background: url('../images/insta_icon.png') no-repeat center;
       margin: 0 15px 0 0;
     }
+    .select-language{
+      height: 14px;
+      font-size: 12px;
+      background: none;
+      border: none;
+      color: #fff;
+      option{color: #000;}
+    }
   }
 }
 
 //slider styles
-.slider{padding: 0 0 55px 0;}
+.slider{
+  padding: 0 0 60px 0;
+  display: flex;
+  justify-content: space-between;
+}
 .slider-sidebar{
   width: 270px;
   .login-wishlist{
@@ -142,7 +154,6 @@ header{
       width: 40px;
       height: 34px;
       background: url('../images/clear-input-icon.png') no-repeat center;
-      // border: 1px solid #000;
       text-align: center;
     }
     .search-btn{
@@ -150,6 +161,8 @@ header{
       background: url('../images/search-icon.png') #333 no-repeat center;
       border: 0 none;
       cursor: pointer;
+      
+      &:hover{background-color: #000;}
       &:focus{outline: medium none;}
     }
   }
@@ -173,10 +186,76 @@ header{
     }
   }
 }
-
+.slider-inner{
+  width: 870px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  .slide-box{
+    color: #fff51f;
+    width: 320px;
+    margin: 65px 100px 0 0;
+    h2{
+      font: 48px 'Raleway', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 35px;
+      margin: 0 0 10px 0;
+    }
+    p{
+      font: 18px 'Raleway', sans-serif;
+      line-height: 24px;
+    }
+    button{
+      font: 14px 'Raleway', sans-serif;
+      font-weight: 800;
+      margin-top: 55px;
+      text-transform: uppercase;
+      line-height: 1;
+      background: #fff51f;
+      color: #000;
+      padding: 20px 30px;
+      border: 0 none;
+      cursor: pointer;
+      transition: all .2s ease;
+      &:hover{
+        color: #fff51f;
+        background: #000;
+      }
+    }
+  }
+  .slider-arrows{
+    position: absolute;
+    top: 150px;
+    a{
+      padding: 17px 16px;
+    }
+    .prev-slide{
+      background: url('../images/prev-slide-icon.png') no-repeat center #fff;
+    }
+    .next-slide{
+      background: url('../images/next-slide-icon.png') no-repeat center #fff;
+    }
+    .active-arrow{background-color: #fbde06;}
+  }
+  .slider-dots{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    span{
+      display: inline-block;
+      width: 40px;
+      height: 4px;
+      background: #faef03;
+      margin: 0 2px;
+      cursor: pointer;
+    }
+    .slide-active{background: #fb4d01;}
+  }
+}
 //sidebar styles
 aside{
- 
   width: 270px;
   .side-block{
     padding: 30px;
@@ -207,6 +286,7 @@ aside{
     font-weight: 700;
     text-transform: uppercase;
     background: #26d2fc;
+    margin-bottom: 30px;
     .menu-title{
       color: #fff;
       height: 66px;
@@ -215,7 +295,7 @@ aside{
       background: #333;
     }
     .menu-list{
-      margin-top: 7px;
+      padding: 10px 0;
       li{
         list-style-type: none;
         a{
@@ -238,8 +318,10 @@ aside{
   .banner{
     background: #e0e0e0;
     padding: 120px 15px 73px;
+   
     display: flex;
     justify-content: flex-end;
+
     p{
       width: 115px;
       font: italic 36px 'Raleway', sans-serif;
@@ -249,10 +331,15 @@ aside{
       margin: 0 35px 0 0;
     }
   }
-
+  .side-block{margin-top: 30px;}
   .tags-widget{
     .tags-widget__tags-list{
       font-size: 0;
+      .tag-active{
+        font: 14px 'Roboto', sans-serif;
+        background: #faef03;
+        padding: 10px 25px;
+      }
       a{
         font: 12px 'Roboto', sans-serif;
         display: inline-block;
@@ -270,10 +357,11 @@ aside{
     display: flex;
     flex-direction: column;
     a{
-      font-size: 14px;
+      font: 14px 'Roboto', sans-serif;
       color: #555;
       text-decoration: none;
       margin-bottom: 15px;
+      &:hover{text-decoration: underline;}
     }
   }
 }
@@ -286,13 +374,20 @@ aside{
   position: relative;
   top: -20px;
 }
+.content-inner{
+  background: #f8f8f8;
+  width: 870px;
+}
 .content-title-box{
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  width: 100%;
   .content-title{
     text-transform: uppercase;
+    font: 22px 'Roboto', sans-serif;
+    font-weight: 900;
     color: #707070;
     font-style: italic;
   }
@@ -313,30 +408,39 @@ aside{
 .items-container{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   .product-item{
-    border: solid 1px blue;
+    max-width: 270px;
     position: relative;
     padding: 10px;
     background: #fff;
+    margin: 0 0 30px 0;
     .product-image{
       width: 250px;height: 230px;
       background: #eaeaea;
     }
     .product-info-box{
+      font: italic 14px 'Roboto', sans-serif;
+      font-weight: 900;
+      color: #333;
       padding: 15px 0 10px;
       display: flex;
       justify-content: space-between;
       .product-name{
         max-width: 170px;
-        border: solid 1px red;
-        text-decoration: none;
-        color: #000;
-        font-size: 14px;
-        font-weight: 700;
+        text-decoration: none;   
+        color: #333;    
       }
       .product-price{
         font-size: 18px;
-        font-weight: 700;
+        .discount-price{
+          font-style: italic;
+          font-size: 14px;
+          text-align: right;
+          color: #e24602;
+          display: block;
+          text-decoration: line-through;
+        }
       }
     }
   }
@@ -346,6 +450,36 @@ aside{
   height: 160px;
   background: url('../images/brands.png') #fff no-repeat center;
 }
+
+.instagram-feed{
+  background: #eaeaea;
+  padding-bottom: 60px;
+  .instagram-feed__profile-name{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 30px;
+    img{margin: 0 10px 0 0}
+    p{
+      font: 22px'Myriad Pro', sans-serif;
+      color: #333;
+      span{font-size: 18px;}
+    }
+  }
+  .instagram-feed__profile-photos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    .instagram-photo{
+        width: 170px;
+        height: 170px;
+        border:solid 7px #fff;
+        background: url('https://p.bigstockphoto.com/GeFvQkBbSLaMdpKXF1Zv_bigstock-Aerial-View-Of-Blue-Lakes-And--227291596.jpg') no-repeat center;
+      background-size: cover;
+    }
+  }
+}
+
 .social-box{
   display: flex;
   height: 150px;
@@ -408,5 +542,8 @@ footer{
   .footer-about-us{
     max-width: 270px;
     border: 1px solid #0f0;
+  }
+  .footer-newsletter, .footer-about-us{
+    h4{margin-bottom: 5px;}
   }
 }
