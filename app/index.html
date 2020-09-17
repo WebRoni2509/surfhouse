@@ -10,6 +10,58 @@
 
 </head>
 <body>
+    <div class="mobile-menu-toggle">
+      <a href="#" class="toggle-menu" onClick="showHideMenu()">
+        D
+      </a>    
+    </div>
+    <div class="mobile-bg"></div>
+    <div class="mobile-menu-wrapper">
+      
+      <div class="mobile-menu">
+        <div class="user-login-box">
+          <div class="login-wishlist">
+            <a href="#">log in</a>
+            <a href="#">wish list <span>(0)</span></a>
+          </div>
+          <div class="cart-box">
+            <div class="cart-box__info">
+              <p class="cart-amount">$1,459.50</p>
+              <span class="cart-quantity">2 items</span>
+            </div>
+            <div class="cart-box__edit">
+              edit
+            </div>
+          </div>
+          <div class="view-cart-checkout">
+            <a href="#" class="view-cart">view cart</a>
+            <a href="#" class="checkout">checkout</a>
+          </div>
+          <div class="search">
+            <input class="search-input" type="text" placeholder="SEARCH">
+            <a href="#" class="clear-input"></a>
+            <button type="button" class="search-btn"></button>
+          </div>
+        </div>
+        <div class="menu">
+          <h4 class="menu-title">menu</h4>
+          <ul class="menu-list">
+            <li><a href="#">about</a></li>
+            <li><a href="#">apparel</a></li>
+            <li><a href="#">surf apparel</a></li>
+            <li><a href="#">windsurf</a></li>
+            <li><a href="#">kitesurf</a></li>
+            <li><a href="#">accessories</a></li>
+            <li><a href="#">sale</a></li>
+            <li><a href="#">brands</a></li>
+            <li><a href="#">blog</a></li>
+            <li><a href="#">gadgets</a></li>
+            <li><a href="#">cantact</a></li> <!-- should be cOntact-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    
     <section class="blue-bg">
       <div class="wrapper">
         <header>
@@ -81,8 +133,6 @@
       <!-- slider and cart got to be here -->
     <div class="wrapper">
       <div class="content">
-
-      
         <aside>
           <div class="menu">
             <h4 class="menu-title">menu</h4>
@@ -108,7 +158,7 @@
           <div class="side-block tags-widget">
             <h4>tags widget</h4>
             <div class="tags-widget__tags-list">
-              <a href="#" class="tag-active">kitesurf</a>
+              <a href="#" class="tag-popular">kitesurf</a>
               <a href="#">super</a>
               <a href="#">duper</a>
               <a href="#">theme</a>
@@ -118,7 +168,7 @@
               <a href="#">best</a>
               <a href="#">accesories</a>
               <a href="#">men</a>
-              <a href="#">apprel</a>
+              <a href="#" class="tag-popular">apprel</a>
               <a href="#">super</a>
               <a href="#">duper</a>
               <a href="#">theme</a>
@@ -156,14 +206,14 @@
             </div>
           </div>
           <div class="items-container">
-            <div class="product-item">
+            <div class="product-item new-product-badge">
               <div class="product-image"></div>
               <div class="product-info-box">
                 <a href="#" class="product-name">Single Thruster 2013</a>
                 <p class="product-price">€.865.00</p>
               </div>
             </div>
-            <div class="product-item">
+            <div class="product-item hot-product-badge">
               <div class="product-image"></div>
               <div class="product-info-box">
                 <a href="#" class="product-name">Freestyle Wave FSW</a>
@@ -187,7 +237,7 @@
             <div class="product-item">
               <div class="product-image"></div>
               <div class="product-info-box">
-                <a href="#" class="product-name">STRIPE 19 QS< /a>
+                <a href="#" class="product-name">STRIPE 19 QS</a>
                 <p class="product-price">€.230.50</p>
               </div>
             </div>
@@ -259,27 +309,23 @@
               </div>
             </div>
           </div>
-
-          
         </div>
       </div>
 
-      <div class="brands">
+      <div class="brands"></div>
 
-      </div>
       <div class="instagram-feed">
         <div class="instagram-feed__profile-name">
             <img src="/images/insta_profile_icon.png" alt="">
             <p>Instagram feed: <span>#instagram</span></p>
-            
         </div>
         <div class="instagram-feed__profile-photos">
-          <div class="instagram-photo"></div>
-          <div class="instagram-photo"></div>
-          <div class="instagram-photo"></div>
-          <div class="instagram-photo"></div>
-          <div class="instagram-photo"></div>
-          <div class="instagram-photo"></div>
+          <div class="instagram-photo photo-1"></div>
+          <div class="instagram-photo photo-2"></div>
+          <div class="instagram-photo photo-3"></div>
+          <div class="instagram-photo photo-4"></div>
+          <div class="instagram-photo photo-5"></div>
+          <div class="instagram-photo photo-6"></div>
         </div>
       </div>
       <div class="social-box">
@@ -289,9 +335,6 @@
       </div>
 
     </div>
-
-  
-
     <footer>
       <div class="wrapper">
         <div class="footer-main">
@@ -327,32 +370,62 @@
               <a href="#">Addresses</a>
             </div>
           </div>
-  
-          <div class="footer-newsletter">
-            <h4>newsletter</h4>
-            <p>Join thousands of other people sub-scribe to our news</p>
-            <div class="newsletter-email-box">
-              <input type="text">
-              <button type="submit">submit</button>
+          <div class="footer-newsletter-about-us">
+            <div class="footer-newsletter">
+              <h4>newsletter</h4>
+              <p>Join thousands of other people sub-scribe to our news</p>
+              <div class="newsletter-email-box">
+                <input type="text">
+                <button type="submit">submit</button>
+              </div>
+              <div class="payment">
+                <img src="/images/aex.png" alt="">
+                <img src="/images/mastercard.png" alt="">
+                <img src="/images/maestro.png" alt="">
+                <img src="/images/paypal.png" alt="">
+                <img src="/images/discover.png" alt="">
+                <img src="/images/visa_straight.png" alt="">
+              </div>
             </div>
-            <div class="payment">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
-              <img src="" alt="">
+            <div class="footer-about-us">
+              <h4>about us</h4>
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+              <div class="footer-about-us__contacts">
+                <p class="footer-about-us-contacs__phone">
+                  Phone: <span>1-999-342-9876</span>
+                </p>
+                <p class="footer-about-us-contacs__email">
+                  e-mail: <a href="mailto:info@surfhouse.com" target="_blank">info@surfhouse.com</a>
+                </p>
+
+              </div>
             </div>
           </div>
-          <div class="footer-about-us">
-            <h4>about us</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt laborum amet ipsam ducimus aperiam quisquam. Harum eligendi delectus facilis impedit, ut, expedita vitae mollitia asperiores, dolor veritatis odio incidunt. Vero repudiandae doloribus magnam, dolore aut enim magni tenetur porro accusamus temporibus nulla, vel, eveniet architecto aperiam delectus impedit non quia! Quia delectus placeat blanditiis! Ab veritatis nam, delectus, blanditiis ex, repellendus nobis dolorum labore temporibus soluta fugit voluptate unde voluptas!</p>
-          </div>
+          
         </div>
         
       </div>
     </footer>      
-
+    <div class="footer-secondary">
+      <div class="wrapper">
+        <div class="footer-secondary-inner">
+          <div class="footer-secondary__rights">
+            2014  All rights reserved
+          </div>
+          <div class="footer-secondary__footer-social">
+            <a href="#" class="footer-social-icon footer-social-facebook"></a>
+            <a href="#" class="footer-social-icon footer-social-twitter"></a>
+            <a href="#" class="footer-social-icon footer-social-pinterest"></a>
+            <a href="#" class="footer-social-icon footer-social-google"></a>
+            <a href="#" class="footer-social-icon footer-social-tumblr"></a>
+            <a href="#" class="footer-social-icon footer-social-instagram"></a>
+            <a href="#" class="footer-social-icon footer-social-rss"></a>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
 
     <script src="js/main.js"></script>
 </body>
