@@ -780,6 +780,10 @@ footer .footer-about-us .footer-about-us__contacts p a {
   margin-left: 13px;
 }
 
+footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__phone {
+  color: #fff;
+}
+
 footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__email {
   margin: 10px 0 0 0;
 }
@@ -852,7 +856,7 @@ footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__ema
   position: fixed;
   top: 20px;
   left: 15px;
-  z-index: 1001;
+  z-index: 13;
 }
 
 .toggle-menu {
@@ -874,7 +878,7 @@ footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__ema
   height: 100%;
   position: fixed;
   top: 101px;
-  z-index: 999;
+  z-index: 11;
 }
 
 .mobile-menu-wrapper .mobile-menu .user-login-box {
@@ -902,7 +906,7 @@ footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__ema
 
 .mobile-bg {
   display: none;
-  z-index: 998;
+  z-index: 10;
   position: fixed;
   top: 101px;
   right: 0;

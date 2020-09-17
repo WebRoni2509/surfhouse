@@ -110,11 +110,21 @@
       }
     }
   }
-  .footer-main{
-    .footer-navigation, .footer-newsletter-about-us{
-      justify-content: space-between;
+  footer{
+    .footer-main{
+      .footer-navigation, .footer-newsletter-about-us{
+        justify-content: space-between;
+      }
+    }
+    .footer-navigation{
+      .footer-navigation-box{
+        display: flex;
+        flex-direction: column;
+        h4{margin: 15px 0 5px 0;}
+      }
     }
   }
+  
 }
 
 @media (max-width: 576px) { 
@@ -130,8 +140,9 @@
         flex-direction: column;
         
       }
-      .footer-newsletter{margin-bottom: 25px;}
     }
+    .footer-newsletter{margin-bottom: 25px;}
+    
   }
 
   .footer-secondary-inner{

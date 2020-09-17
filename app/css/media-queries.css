@@ -80,7 +80,7 @@
     margin: 0 0 20px 0;
     align-items: center;
     position: fixed;
-    z-index: 999;
+    z-index: 12;
     left: 0;
     right: 0;
     top: 0;
@@ -106,8 +106,15 @@
     width: 200px;
     height: 200px;
   }
-  .footer-main .footer-navigation, .footer-main .footer-newsletter-about-us {
+  footer .footer-main .footer-navigation, footer .footer-main .footer-newsletter-about-us {
     justify-content: space-between;
+  }
+  footer .footer-navigation .footer-navigation-box {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-navigation .footer-navigation-box h4 {
+    margin: 15px 0 5px 0;
   }
 }
 
@@ -120,7 +127,7 @@
   footer .footer-main .footer-navigation, footer .footer-main .footer-newsletter-about-us {
     flex-direction: column;
   }
-  footer .footer-main .footer-newsletter {
+  footer .footer-newsletter {
     margin-bottom: 25px;
   }
   .footer-secondary-inner {
