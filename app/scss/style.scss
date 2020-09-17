@@ -662,6 +662,8 @@ footer{
   z-index: 13;
 }
 .toggle-menu{
+  position: relative;
+  z-index: 14;
   width: 30px;
   height: 30px;
   background: url('../images/hamburger.png') no-repeat center;
