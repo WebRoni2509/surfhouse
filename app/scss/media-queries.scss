@@ -128,7 +128,9 @@
     .footer-main{
       .footer-navigation, .footer-newsletter-about-us{
         flex-direction: column;
+        
       }
+      .footer-newsletter{margin-bottom: 25px;}
     }
   }
 
