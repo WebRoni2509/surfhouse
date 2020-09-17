@@ -67,6 +67,9 @@
   .slider {
     display: none;
   }
+  body {
+    padding-top: 121px;
+  }
   aside {
     display: none;
   }
@@ -76,6 +79,12 @@
     padding: 10px 0;
     margin: 0 0 20px 0;
     align-items: center;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: #abeafa;
   }
   header .logo {
     width: 50px;
@@ -104,13 +113,18 @@
 
 @media (max-width: 576px) {
   .mobile-menu-wrapper {
-    position: absolute;
     top: 100px;
     width: 100%;
     height: 100%;
-    z-index: 1;
   }
   footer .footer-main .footer-navigation, footer .footer-main .footer-newsletter-about-us {
     flex-direction: column;
+  }
+  .footer-secondary-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-secondary-inner .footer-secondary__rights {
+    margin: 0 0 10px 0;
   }
 }

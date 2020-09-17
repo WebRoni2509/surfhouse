@@ -526,20 +526,19 @@ aside .article-experts__article-experts-list a:hover {
   position: absolute;
   right: 0;
   top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 45px 45px 0;
-  border-color: transparent #e24602 transparent transparent;
+  width: 46px;
+  height: 46px;
+  background: url("../images/new-badge.png") no-repeat right center;
 }
 
-.items-container .product-item.new-product-badge::after {
+.items-container .product-item.hot-product-badge::before {
   content: '';
-  text-transform: uppercase;
-  font: 4px 'Roboto' sans-serif;
   position: absolute;
-  top: 5px;
-  right: 5px;
+  right: 0;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  background: url("../images/hot-badge.png") no-repeat right center;
 }
 
 .items-container .product-item .product-image {
@@ -804,51 +803,76 @@ footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__ema
   justify-content: space-between;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-icon {
-  width: 16px;
-  height: 16px;
+.footer-secondary .footer-secondary-inner .footer-secondary__rights {
+  color: #fff;
+  font: 12px 'Myriad Pro', sans-serif;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-facebook {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social {
+  display: flex;
+}
+
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-icon {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+}
+
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-facebook {
   background: url("../images/facebook_icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-twitter {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-twitter {
   background: url("../images/twitter_icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-pinterest {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-pinterest {
   background: url("../images/pinterest_icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-google {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-google {
   background: url("../images/google-plus-icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-tubmlr {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-tumblr {
   background: url("../images/tumblr-icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-instagram {
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-instagram {
   background: url("../images/instagram-icon.png") no-repeat center;
 }
 
-.footer-secondary .footer-secondary-inner .footer-social-rss {
-  background: url("../images/rss-icon.png") no-repeat center;
+.footer-secondary .footer-secondary-inner .footer-secondary__footer-social .footer-social-rss {
+  background: url("../images/rss.png") no-repeat center;
 }
 
 .mobile-menu-toggle {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 15px;
+  z-index: 1001;
+}
+
+.toggle-menu {
+  width: 30px;
+  height: 30px;
+  background: url("../images/hamburger.png") no-repeat center;
+  display: block;
+  background-size: contain;
+}
+
+.toggle-menu.menu-close {
+  background: url("../images/close-menu.png") no-repeat center;
+  background-size: contain;
 }
 
 .mobile-menu-wrapper {
   display: none;
   width: 300px;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 101px;
   z-index: 999;
 }
@@ -874,4 +898,23 @@ footer .footer-about-us .footer-about-us__contacts .footer-about-us-contacs__ema
 
 .mobile-menu-wrapper.hide-menu {
   display: none;
+}
+
+.mobile-bg {
+  display: none;
+  z-index: 998;
+  position: fixed;
+  top: 101px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-bg.show-overlay {
+  display: block;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
